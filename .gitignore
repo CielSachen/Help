@@ -1,0 +1,10 @@
+# IDE: Visual Studio Code Settings Directory
+.vscode/**/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Java: Compilation Output
+**/*.class
+
+# Miscellaneous
+**/.DS_Store
