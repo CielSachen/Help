@@ -1,0 +1,26 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+
+  "files.insertFinalNewline": true,
+
+  "C_Cpp.default.cStandard": "c99",
+  "C_Cpp.default.includePath": ["${workspaceFolder}/**"],
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, BreakStringLiterals: false, ColumnLimit: 120, ContinuationIndentWidth: 2 }",
+
+  "java.settings.url": ".vscode/settings.prefs",
+
+  "prettier.printWidth": 120,
+
+  "[c][cpp]": {
+    "editor.codeActionsOnSave": { "source.fixAll": "explicit", "source.organizeImports": "explicit" },
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+
+  "[java]": {
+    "editor.codeActionsOnSave": { "source.fixAll": "explicit", "source.organizeImports": "explicit" },
+    "editor.defaultFormatter": "redhat.java",
+    "editor.tabSize": 4
+  }
+}
