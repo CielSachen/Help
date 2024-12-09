@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "github.vscode-pull-request-github",
+    "ms-vscode.cpptools-extension-pack",
+    "ms-vscode.makefile-tools",
+    "redhat.vscode-yaml",
+    "visualstudioexptteam.intellicode-api-usage-examples",
+    "visualstudioexptteam.vscodeintellicode",
+    "vscjava.vscode-java-pack"
+  ]
+}
