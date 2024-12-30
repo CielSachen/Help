@@ -13,6 +13,11 @@
 
   "prettier.printWidth": 120,
 
+  "ruff.configuration": "./ruff.toml",
+  "ruff.lineLength": 120,
+
+  "rust-analyzer.linkedProjects": ["ccdstru/rust/Cargo.toml"],
+
   "[c][cpp]": {
     "editor.codeActionsOnSave": { "source.fixAll": "explicit", "source.organizeImports": "explicit" },
     "editor.defaultFormatter": "ms-vscode.cpptools"
@@ -21,6 +26,12 @@
   "[java]": {
     "editor.codeActionsOnSave": { "source.fixAll": "explicit", "source.organizeImports": "explicit" },
     "editor.defaultFormatter": "redhat.java",
+    "editor.tabSize": 4
+  },
+
+  "[rust]": {
+    "editor.codeActionsOnSave": { "source.fixAll": "explicit", "source.organizeImports": "explicit" },
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
     "editor.tabSize": 4
   }
 }

@@ -14,10 +14,15 @@ The CCDSTRU machine project specifications allow you to write it in Java; a [Jav
 
 CCDSTRU 머신 프로젝트 사양을 사용하면 Java로 작성할 수 있으며, [**Java SE 8**](https://docs.oracle.com/javase/8/docs/api/) 소스 코드도 사용할 수 있습니다. 그러나 소스 코드는 사양을 맞추는 대신 게임과 비슷하게 만들어졌습니다.
 
+An implementation in Rust is also available for the CCDSTRU source code.
+
+Rust에서 만든 구현체는 CCDSTRU 소스 코드에도 사용할 수 있습니다.
+
 ### Summary
 
 - C Standard: C99
 - Java Release: SE 8
+- Rust Edition: 2021
 
 ## Made With Love, Pain, and Tunes
 

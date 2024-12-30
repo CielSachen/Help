@@ -5,6 +5,7 @@
     "ms-vscode.cpptools-extension-pack",
     "ms-vscode.makefile-tools",
     "redhat.vscode-yaml",
+    "rust-lang.rust-analyzer",
     "visualstudioexptteam.intellicode-api-usage-examples",
     "visualstudioexptteam.vscodeintellicode",
     "vscjava.vscode-java-pack"

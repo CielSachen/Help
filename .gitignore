@@ -11,6 +11,10 @@
 # Java
 **/*.class
 
+# Rust
+**/debug/
+**/target/
+
 # Miscellaneous
 **/.DS_Store
 
