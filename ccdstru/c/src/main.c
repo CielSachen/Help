@@ -38,11 +38,11 @@ void next_player_move(OrderedPair pos, int over, int next, FSet f3, int *good, F
     combine_sets(f2, pos_set, F_SET_SIZE);
   }
 
-  if (!over && *good && next && get_set_S_subsets_amount(f1, F_SET_SIZE) > get_actual_set_size(c1, C_SET_SIZE)) {
+  if (!over && *good && next && get_set_s_subsets_amount(f1, F_SET_SIZE) > get_actual_set_size(c1, C_SET_SIZE)) {
     combine_sets(c1, cd_set, C_SET_SIZE);
   }
 
-  if (!over && *good && !next && get_set_S_subsets_amount(f2, F_SET_SIZE) > get_actual_set_size(c2, C_SET_SIZE)) {
+  if (!over && *good && !next && get_set_s_subsets_amount(f2, F_SET_SIZE) > get_actual_set_size(c2, C_SET_SIZE)) {
     combine_sets(c2, cd_set, C_SET_SIZE);
   }
 
@@ -58,11 +58,11 @@ void next_player_move(OrderedPair pos, int over, int next, FSet f3, int *good, F
  * @param[out] result The result element value.
  */
 void game_over(int over, int *next, CSet c1, CSet c2, char **result) {
-  if (over && *next && get_actual_set_size(c1, C_SET_SIZE) > 0 && is_containing_an_element_of_set_P(c1, C_SET_SIZE)) {
+  if (over && *next && get_actual_set_size(c1, C_SET_SIZE) > 0 && is_superset_of_set_p_set(c1, C_SET_SIZE)) {
     *result = "A wins";
   }
 
-  if (over && !*next && get_actual_set_size(c2, C_SET_SIZE) > 0 && is_containing_an_element_of_set_P(c2, C_SET_SIZE)) {
+  if (over && !*next && get_actual_set_size(c2, C_SET_SIZE) > 0 && is_superset_of_set_p_set(c2, C_SET_SIZE)) {
     *result = "B wins";
   }
 
@@ -128,8 +128,8 @@ int main(void) {
     update_set_f3(f1, f2, f3);
 
     over = get_actual_set_size(f3, F_SET_SIZE) == 0 ||
-           (get_actual_set_size(c1, C_SET_SIZE) > 0 && is_containing_an_element_of_set_P(c1, C_SET_SIZE)) ||
-           (get_actual_set_size(c2, C_SET_SIZE) > 0 && is_containing_an_element_of_set_P(c2, C_SET_SIZE));
+           (get_actual_set_size(c1, C_SET_SIZE) > 0 && is_superset_of_set_p_set(c1, C_SET_SIZE)) ||
+           (get_actual_set_size(c2, C_SET_SIZE) > 0 && is_superset_of_set_p_set(c2, C_SET_SIZE));
 
     game_over(over, &next, c1, c2, &result);
 

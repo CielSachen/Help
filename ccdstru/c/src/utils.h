@@ -43,7 +43,7 @@ void combine_sets(OrderedPair main_set[], OrderedPair set[], int set_size);
  * @param set_size The size of `set`.
  * @returns The number of sets that are subsets of `set`.
  */
-int get_set_S_subsets_amount(OrderedPair set[], int set_size);
+int get_set_s_subsets_amount(OrderedPair set[], int set_size);
 
 /**
  * Gets the amount of elements the passed set contains.
@@ -59,7 +59,7 @@ int get_actual_set_size(OrderedPair set[], int set_size);
  * @param set_size The size of `set`.
  * @returns `1` if `set` is a superset or `0` if not.
  */
-int is_superset_of_set_P_set(OrderedPair set[], int set_size);
+int is_superset_of_set_p_set(OrderedPair set[], int set_size);
 
 /**
  * Updates the contents of set F₃ using the passed sets F₁ and F₂.
@@ -67,7 +67,7 @@ int is_superset_of_set_P_set(OrderedPair set[], int set_size);
  * @param f2 The set F₂ value.
  * @param f3 The set F₃ value.
  */
-void update_set_F3(FSet f1, FSet f2, FSet f3);
+void update_set_f3(FSet f1, FSet f2, FSet f3);
 
 /**
  * Prints this board with row and column legends to the console.

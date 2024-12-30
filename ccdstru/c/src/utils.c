@@ -80,8 +80,8 @@ void combine_sets(OrderedPair main_set[], OrderedPair set[], int set_size) {
  * @param set_size The size of `set`.
  * @returns The number of sets that are subsets of `set`.
  */
-int get_set_S_subsets_amount(OrderedPair set[], int set_size) {
-  OrderedPair S[4][6] = {{{1, 1}, {1, 3}, {2, 2}, {3, 1}, {3, 3}, {0, 0}},
+int get_set_s_subsets_amount(OrderedPair set[], int set_size) {
+  OrderedPair s[4][6] = {{{1, 1}, {1, 3}, {2, 2}, {3, 1}, {3, 3}, {0, 0}},
                          {{4, 4}, {4, 6}, {5, 5}, {6, 4}, {6, 6}, {0, 0}},
                          {{1, 5}, {2, 4}, {2, 5}, {2, 6}, {3, 5}, {0, 0}},
                          {{4, 1}, {4, 3}, {5, 1}, {5, 3}, {6, 1}, {6, 3}}};
@@ -89,15 +89,15 @@ int get_set_S_subsets_amount(OrderedPair set[], int set_size) {
 
   for (int index = 0; index < 4; index++) {
     if (index == 3) {
-      if (is_element_of_set(S[3][0], set, set_size) && is_element_of_set(S[3][1], set, set_size) &&
-          is_element_of_set(S[3][2], set, set_size) && is_element_of_set(S[3][3], set, set_size) &&
-          is_element_of_set(S[3][4], set, set_size) && is_element_of_set(S[3][5], set, set_size)) {
+      if (is_element_of_set(s[3][0], set, set_size) && is_element_of_set(s[3][1], set, set_size) &&
+          is_element_of_set(s[3][2], set, set_size) && is_element_of_set(s[3][3], set, set_size) &&
+          is_element_of_set(s[3][4], set, set_size) && is_element_of_set(s[3][5], set, set_size)) {
         intersecting_elements_amount++;
       }
     } else {
-      if (is_element_of_set(S[index][0], set, set_size) && is_element_of_set(S[index][1], set, set_size) &&
-          is_element_of_set(S[index][2], set, set_size) && is_element_of_set(S[index][3], set, set_size) &&
-          is_element_of_set(S[index][4], set, set_size)) {
+      if (is_element_of_set(s[index][0], set, set_size) && is_element_of_set(s[index][1], set, set_size) &&
+          is_element_of_set(s[index][2], set, set_size) && is_element_of_set(s[index][3], set, set_size) &&
+          is_element_of_set(s[index][4], set, set_size)) {
         intersecting_elements_amount++;
       }
     }
@@ -128,11 +128,11 @@ int get_actual_set_size(OrderedPair set[], int set_size) {
  * @param set_size The size of `set`.
  * @returns `1` if `set` is a superset or `0` if not.
  */
-int is_superset_of_set_P_set(OrderedPair set[], int set_size) {
-  OrderedPair P[2][2] = {{{1, 1}, {2, 2}}, {{1, 2}, {2, 1}}};
+int is_superset_of_set_p_set(OrderedPair set[], int set_size) {
+  OrderedPair p[2][2] = {{{1, 1}, {2, 2}}, {{1, 2}, {2, 1}}};
 
   for (int index = 0; index < 2; index++) {
-    if (is_element_of_set(P[index][0], set, set_size) && is_element_of_set(P[index][1], set, set_size)) return 1;
+    if (is_element_of_set(p[index][0], set, set_size) && is_element_of_set(p[index][1], set, set_size)) return 1;
   }
 
   return 0;
@@ -144,7 +144,7 @@ int is_superset_of_set_P_set(OrderedPair set[], int set_size) {
  * @param f2 The set F₂ value.
  * @param f3 The set F₃ value.
  */
-void update_set_F3(FSet f1, FSet f2, FSet f3) {
+void update_set_f3(FSet f1, FSet f2, FSet f3) {
   FSet new_f3 = {{1, 1}, {1, 2}, {1, 3}, {1, 4}, {1, 5}, {1, 6}, {2, 1}, {2, 2}, {2, 3}, {2, 4}, {2, 5}, {2, 6},
                  {3, 1}, {3, 2}, {3, 3}, {3, 4}, {3, 5}, {3, 6}, {4, 1}, {4, 2}, {4, 3}, {4, 4}, {4, 5}, {4, 6},
                  {5, 1}, {5, 2}, {5, 3}, {5, 4}, {5, 5}, {5, 6}, {6, 1}, {6, 2}, {6, 3}, {6, 4}, {6, 5}, {6, 6}};
@@ -165,8 +165,8 @@ void update_set_F3(FSet f1, FSet f2, FSet f3) {
  * @param f2 The set F₂ value.
  */
 void print_game_board(FSet f1, FSet f2) {
-  int max_columns = 6;
   int max_rows = 6;
+  int max_columns = 6;
 
   for (int row_number = 0; row_number <= max_rows; row_number++) {
     for (int column_number = 0; column_number <= max_columns; column_number++) {
