@@ -182,22 +182,20 @@ void print_game_board(FSet f1, FSet f2) {
             printf(" ");
           }
         }
+      } else if (column_number == 0) {
+        printf("%d ", row_number);
       } else {
-        if (column_number == 0) {
-          printf("%d ", row_number);
+        OrderedPair coordinates = {row_number, column_number};
+
+        if (is_element_of_set(coordinates, f1, F_SET_SIZE)) {
+          printf("| A ");
+        } else if (is_element_of_set(coordinates, f2, F_SET_SIZE)) {
+          printf("| B ");
         } else {
-          OrderedPair coordinates = {row_number, column_number};
-
-          if (is_element_of_set(coordinates, f1, F_SET_SIZE)) {
-            printf("| A ");
-          } else if (is_element_of_set(coordinates, f2, F_SET_SIZE)) {
-            printf("| B ");
-          } else {
-            printf("|   ");
-          }
-
-          if (column_number == max_columns) printf("|\n");
+          printf("|   ");
         }
+
+        if (column_number == max_columns) printf("|\n");
       }
     }
 

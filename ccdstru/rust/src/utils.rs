@@ -130,23 +130,21 @@ pub(crate) fn print_game_board(f1: &Set, f2: &Set) -> () {
                         print!(" ");
                     }
                 }
+            } else if column_number == 0 {
+                print!("{row_number} ");
             } else {
-                if column_number == 0 {
-                    print!("{row_number} ");
+                let coordinates: OrderedPair = (row_number, column_number);
+
+                if f1.contains(&coordinates) {
+                    print!("| A ");
+                } else if f2.contains(&coordinates) {
+                    print!("| B ");
                 } else {
-                    let coordinates: OrderedPair = (row_number, column_number);
+                    print!("|   ");
+                }
 
-                    if f1.contains(&coordinates) {
-                        print!("| A ");
-                    } else if f2.contains(&coordinates) {
-                        print!("| B ");
-                    } else {
-                        print!("|   ");
-                    }
-
-                    if column_number == max_columns {
-                        println!("|")
-                    }
+                if column_number == max_columns {
+                    println!("|")
                 }
             }
         }
