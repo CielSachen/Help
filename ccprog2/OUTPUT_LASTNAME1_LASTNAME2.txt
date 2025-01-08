@@ -1,0 +1,40 @@
+----- CCPROG2 MP : 2023-24 : Question 1 -----
+Which territory has the highest change in life expectancy due to smoking that is not greater than <parameter_number> years?
+Answer (<parameter_number> = 1.000000): Puerto_Rico
+Answer (<parameter_number> = -2.000000): INVALID INPUT
+Answer (<parameter_number> = 3.000000): Lebanon
+
+----- CCPROG2 MP : 2023-24 : Question 2 -----
+What is the sum of the loss of life expectancy due to metabolic syndrome, dietary factors, and fasting plasma sugar for <parameter_territory_name>?
+Answer (<parameter_territory_name> = Taiwan): 6.656377
+Answer (<parameter_territory_name> = South_Korea): 5.476058
+Answer (<parameter_territory_name> = Japan): 4.182285
+
+----- CCPROG2 MP : 2023-24 : Question 3 -----
+Does <parameter_territory_name> have a negligible change in life expectancy due to ozone (less than 0.01)?
+Answer (<parameter_territory_name> = Taiwan): false
+Answer (<parameter_territory_name> = South_Korea): false
+Answer (<parameter_territory_name> = Japan): false
+
+----- CCPROG2 MP : 2023-24 : Question 4 -----
+What is the average change in life expectancy due to air pollution for the top <parameter_number> territories with the highest baseline life expectancy? List the respective territories.
+Answer (<parameter_number> = 10): 0.338402
+    1. Singapore (0.565649)
+    2. Japan (0.297785)
+    3. Iceland (0.087976)
+    4. Switzerland (0.220011)
+    5. Italy (0.409795)
+    6. Spain (0.258372)
+    7. Israel (0.501422)
+    8. Norway (0.106604)
+    9. South_Korea (0.691468)
+    10. Luxembourg (0.244940)
+Answer (<parameter_number> = 0): INVALID INPUT
+Answer (<parameter_number> = 3): 0.317137
+    1. Singapore (0.565649)
+    2. Japan (0.297785)
+    3. Iceland (0.087976)
+
+----- CCPROG2 MP : 2023-24 : Question 5 -----
+What is the minimum change in life expectancy due to environmental/occupational hazards that is greater than 3% of the respective territories' baseline life expectancy?
+Answer: South_Africa (2.175128)

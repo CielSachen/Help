@@ -1,0 +1,21 @@
+* text=auto
+
+.clang-format text
+*.c text diff=cpp
+*.cpp text diff=cpp
+*.h text diff=cpp
+*.hpp text diff=cpp
+*.java text diff=java
+*.json text
+*.md text diff=markdown
+*.prefs text
+*.rs text diff=rust
+*.toml text
+*.txt text
+Cargo.lock text
+Makefile text
+
+*.pdf diff=astextplain
+
+.gitattributes export-ignore
+.gitignore export-ignore

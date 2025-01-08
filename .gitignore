@@ -1,0 +1,19 @@
+# Visual Studio Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/settings.prefs
+
+# C
+**/a.exe*
+**/a.out*
+
+# Java
+**/*.class
+
+# Rust
+**/debug/
+**/target/
+
+# Miscellaneous
+**/.DS_Store
